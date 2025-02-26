@@ -52,9 +52,14 @@ sudo make install
 
 3. **Update Redis Configuration:**
    ```bash
-   sudo sed -i 's/^supervised no/supervised systemd/' /etc/redis/redis.conf
-   sudo sed -i 's/^daemonize no/daemonize yes/' /etc/redis/redis.conf   # Start Redis in the background
-   sudo sed -i 's/^dir .\//dir \/var\/lib\/redis\//' /etc/redis/redis.conf
+# Configure Redis to use systemd for supervision, enabling better process management
+sudo sed -i 's/^supervised no/supervised systemd/' /etc/redis/redis.conf  
+
+# Start Redis in the background (daemon mode) so it runs as a background service
+sudo sed -i 's/^daemonize no/daemonize yes/' /etc/redis/redis.conf  
+
+# Change the default Redis working directory to /var/lib/redis for storing data files
+sudo sed -i 's/^dir .\//dir \/var\/lib\/redis\//' /etc/redis/redis.conf  
    ```
 
 #### 6. Start and Stop Redis Manually:
