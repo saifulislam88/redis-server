@@ -1,8 +1,7 @@
-## Redis(Particular Version) v3.2.12 Installation on AlmaLinux 9.5
+## Redis v3.2.12 Installation on AlmaLinux 9.5(Particular Version)
 
 ### Prerequisites:
 - Redis version: 3.2.12
-- RabbitMQ version: 3.8.35
 - AlmaLinux 9.5 or similar OS.
 
 ### Step-by-Step Redis Installation
