@@ -1,4 +1,5 @@
 ## Redis v3.2.12 Installation on AlmaLinux 9.5(Particular Version)
+🚀TkTp-Memory
 
 ### Prerequisites:
 - Redis version: 3.2.12
@@ -72,6 +73,7 @@ sudo ln -s /usr/local/bin/redis-server /usr/bin/redis-server
 ```bash
 sudo redis-cli
 sudo redis-server /etc/redis/redis.conf
+sudo redis-cli shutdown
 ```
 
 #### 9. Configure Redis as a Systemd Service:
@@ -120,6 +122,8 @@ sudo redis-server /etc/redis/redis.conf
    sudo systemctl stop redis
    reboot
    sudo systemctl status redis
+   sudo redis-cli --version
+   sudo redis-server --version
    sudo redis-cli
    ```
 
